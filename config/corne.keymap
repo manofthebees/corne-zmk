@@ -40,10 +40,10 @@
 
         delta {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &kp LC(TAB)    &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp DQT         &kp PIPE         &trans
-&trans  &trans  &trans  &trans  &trans  &trans         &trans  &kp LBKT              &kp RBKT               &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans
-&trans  &trans  &trans  &trans  &trans  &trans         &trans  &trans                &trans                 &trans          &trans           &trans
-                        &trans  &trans  &trans         &trans  &trans                &trans
+&trans  &trans  &trans  &trans  &trans  &kp LC(TAB)    &trans             &trans                &trans                 &trans          &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans         &kp PIPE           &kp LBKT              &kp RBKT               &kp LEFT_BRACE  &kp RIGHT_BRACE  &trans
+&trans  &trans  &trans  &trans  &trans  &trans         &kp DOUBLE_QUOTES  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &trans          &trans           &trans
+                        &trans  &trans  &trans         &trans             &trans                &trans
             >;
         };
     };
