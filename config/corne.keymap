@@ -5,6 +5,7 @@
 &mt {
     quick-tap-ms = <75>;
     flavor = "tap-preferred";
+    tapping-term-ms = <100>;
 };
 
 / {
