@@ -6,7 +6,7 @@
 &mt {
     quick-tap-ms = <75>;
     flavor = "tap-preferred";
-    tapping-term-ms = <100>;
+    tapping-term-ms = <150>;
 };
 
 / {
@@ -51,10 +51,10 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &mkp LCLK &trans  &mkp RCLK  &trans    &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans  &trans
+&trans  &trans  &trans     &trans  &trans     &trans    &trans          &trans        &trans          &trans           &trans  &trans
+&trans  &trans  &mkp LCLK  &trans  &mkp RCLK  &trans    &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
+&trans  &trans  &trans     &trans  &trans     &trans    &trans          &trans        &trans          &trans           &trans  &trans
+                           &trans  &trans     &trans    &trans          &trans        &trans
             >;
         };
     };
