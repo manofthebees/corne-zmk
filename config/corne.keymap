@@ -14,7 +14,7 @@
 #define MOVE_LEFT MOVE_HOR(-U_MOUSE_MOVE_MAX)
 #define MOVE_RIGHT MOVE_HOR(U_MOUSE_MOVE_MAX)
 
-#define U_MOUSE_SCROLL_MAX 100                    /* <--- New max speed setting (default: 10) */
+#define U_MOUSE_SCROLL_MAX 15                    /* <--- New max speed setting (default: 10) */
 
 #undef SCROLL_UP
 #undef SCROLL_DOWN
@@ -94,7 +94,7 @@
 
         mouse {
             bindings = <
-&trans  &trans  &trans     &mwh SCROLL_UP     &trans     &trans    &trans          &trans        &trans          &trans           &trans  &trans
+&trans  &trans  &mwh SCROLL_LEFT     &mwh SCROLL_UP     &mwh SCROLL_RIGHT     &trans    &trans          &trans        &trans          &trans           &trans  &trans
 &trans  &trans  &mkp LCLK  &mkp MCLK  &mkp RCLK  &trans    &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
 &trans  &trans  &trans     &mwh SCROLL_DOWN     &trans     &trans    &trans          &trans        &trans          &trans           &trans  &trans
                            &trans     &trans     &trans    &trans          &trans        &trans
