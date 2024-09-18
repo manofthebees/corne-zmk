@@ -6,19 +6,32 @@
 &mt {
     quick-tap-ms = <75>;
     flavor = "tap-preferred";
-    tapping-term-ms = <150>;
+    tapping-term-ms = <125>;
 };
 
 / {
+    behaviors {
+        mouse_mode: mouse_mode {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MOUSE_MODE";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <125>;
+            flavor = "tap-preferred";
+            quick-tap-ms = <75>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
         alpha {
             bindings = <
-&kp GRAVE  &kp Q  &kp W  &kp E       &kp R  &kp T              &kp Y       &kp U      &kp I          &kp O    &kp P     &kp MINUS
-&kp TAB    &kp A  &kp S  &kp D       &kp F  &kp G              &kp H       &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
-&mo 1      &kp Z  &kp X  &kp C       &kp V  &kp B              &kp N       &kp M      &kp COMMA      &kp DOT  &kp FSLH  &mo 2
-                         &kp LSHIFT  &mo 3  &mt LCTRL SPACE    &kp ESCAPE  &kp ENTER  &kp BACKSPACE
+&kp GRAVE  &kp Q  &kp W  &kp E       &kp R  &kp T              &kp Y              &kp U      &kp I          &kp O    &kp P     &kp MINUS
+&kp TAB    &kp A  &kp S  &kp D       &kp F  &kp G              &kp H              &kp J      &kp K          &kp L    &kp SEMI  &kp SQT
+&mo 1      &kp Z  &kp X  &kp C       &kp V  &kp B              &kp N              &kp M      &kp COMMA      &kp DOT  &kp FSLH  &mo 2
+                         &kp LSHIFT  &mo 3  &mt LCTRL SPACE    &mouse_mode 4 ESC  &kp ENTER  &kp BACKSPACE
             >;
         };
 
