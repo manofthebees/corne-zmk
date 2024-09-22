@@ -21,12 +21,12 @@
 #undef SCROLL_LEFT
 #undef SCROLL_RIGHT
 
-#define SCROLL_UP SCROLL_VERT(U_MOUSE_SCROLL_MAX)
-#define SCROLL_DOWN SCROLL_VERT(-U_MOUSE_SCROLL_MAX)
-#define SCROLL_LEFT SCROLL_HOR(-U_MOUSE_SCROLL_MAX)
-#define SCROLL_RIGHT SCROLL_HOR(U_MOUSE_SCROLL_MAX)
+#define SCROLL_UP SCROLL_Y(U_MOUSE_SCROLL_MAX)
+#define SCROLL_DOWN SCROLL_Y(-U_MOUSE_SCROLL_MAX)
+#define SCROLL_LEFT SCROLL_X(-U_MOUSE_SCROLL_MAX)
+#define SCROLL_RIGHT SCROLL_X(U_MOUSE_SCROLL_MAX)
 
-&mwh {
+&msc {
     time-to-max-speed-ms = <500>;                 /* <--- How long time until max speed is reached */
 };
 
@@ -95,9 +95,9 @@
 
         mouse {
             bindings = <
-&trans  &trans  &mwh SCROLL_LEFT  &mwh SCROLL_UP    &mwh SCROLL_RIGHT  &trans    &trans          &trans        &trans          &trans           &trans  &trans
+&trans  &trans  &msc SCROLL_LEFT  &msc SCROLL_UP    &msc SCROLL_RIGHT  &trans    &trans          &trans        &trans          &trans           &trans  &trans
 &trans  &trans  &mkp LCLK         &mkp MCLK         &mkp RCLK          &trans    &mmv MOVE_LEFT  &mmv MOVE_UP  &mmv MOVE_DOWN  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans            &mwh SCROLL_DOWN  &trans             &trans    &trans          &trans        &trans          &trans           &trans  &trans
+&trans  &trans  &trans            &msc SCROLL_DOWN  &trans             &trans    &trans          &trans        &trans          &trans           &trans  &trans
                                   &trans            &trans             &trans    &trans          &trans        &trans
             >;
         };
