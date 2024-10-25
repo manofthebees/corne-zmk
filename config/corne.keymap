@@ -16,7 +16,7 @@
 #define MOVE_RIGHT MOVE_X(U_MOUSE_MOVE_MAX)
 
 &msc {
-    time-to-max-speed-ms = <1000>;                 /* <--- How long time until max speed is reached */
+    time-to-max-speed-ms = <2000>;                 /* <--- How long time until max speed is reached */
 };
 
 &mmv {
