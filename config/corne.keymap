@@ -4,7 +4,8 @@
 #include <dt-bindings/zmk/mouse.h>
 
 #define U_MOUSE_MOVE_MAX 1500                     /* <--- New max speed setting (default: 600) */
-#define U_MOUSE_SCROLL_MAX 100
+#define ZMK_MOUSE_DEFAULT_SCRL_VAL 20 /* <---- new max scroll setting */
+
 
 #undef MOVE_UP
 #undef MOVE_DOWN
@@ -17,11 +18,15 @@
 #define MOVE_RIGHT MOVE_X(U_MOUSE_MOVE_MAX)
 
 &msc {
-    time-to-max-speed-ms = <2000>;                 /* <--- How long time until max speed is reached */
+    acceleration-exponent = <1>;
+    time-to-max-speed-ms = <40>;                 /* <--- How long time until max speed is reached */
+    delay-ms = <0>; 
 };
 
 &mmv {
-    time-to-max-speed-ms = <200>;             /* <--- How long time until max speed is reached (default: 500) */
+    acceleration-exponent = <1>;
+    delay-ms = <0>
+    time-to-max-speed-ms = <500>;             /* <--- How long time until max speed is reached (default: 500) */
 };
 
 &mt {
