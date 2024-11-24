@@ -25,7 +25,7 @@
 
 &mmv {
     acceleration-exponent = <1>;
-    delay-ms = <0>
+    delay-ms = <0>;
     time-to-max-speed-ms = <500>;             /* <--- How long time until max speed is reached (default: 500) */
 };
 
